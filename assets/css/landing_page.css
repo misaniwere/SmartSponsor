@@ -60,3 +60,27 @@ color: #2D1172;
    width: 363px;
    padding-top:52px;
 }
+
+.success_text{
+  font-size: 16px;
+}
+
+.okbutton{
+  position: absolute;
+  background: #2D1172;
+  border-radius: 7px;
+  margin-top: 18px;
+  margin-left: 20px;
+  margin-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffff;
+  width: 291px;
+  font-size: 16px;
+}
+
+.successimage{
+  width: 50%;
+  height:50%;
+  color: blue;
+}
