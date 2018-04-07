@@ -1,0 +1,400 @@
+{
+  "contractName": "set_int",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "public_int",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "tmpNum",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806100dd833981016040528080519060200190919050508060008190555050609c806100416000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b90f636d146044575b600080fd5b3415604e57600080fd5b6054606a565b6040518082815260200191505060405180910390f35b600054815600a165627a7a7230582040ad8ddb8c23551d765f72ac0684dba92ba873e8bb57c9e4b7e5f25def9882810029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b90f636d146044575b600080fd5b3415604e57600080fd5b6054606a565b6040518082815260200191505060405180910390f35b600054815600a165627a7a7230582040ad8ddb8c23551d765f72ac0684dba92ba873e8bb57c9e4b7e5f25def9882810029",
+  "sourceMap": "28:137:7:-;;;83:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;146:6;133:10;:19;;;;83:77;28:137;;;;;;",
+  "deployedSourceMap": "28:137:7:-;;;;;;;;;;;;;;;;;;;;;;;;52:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.16;\r\n\r\ncontract set_int {\r\n    int256 public public_int;\r\n    function set_int(int256 tmpNum) public {\r\n        public_int = tmpNum;\r\n    }  \r\n}",
+  "sourcePath": "/Users/kyrastephen/SmartSponsor/truffle_tutorial/truffleWorkspace/contracts/set_int.sol",
+  "ast": {
+    "absolutePath": "/Users/kyrastephen/SmartSponsor/truffle_tutorial/truffleWorkspace/contracts/set_int.sol",
+    "exportedSymbols": {
+      "set_int": [
+        355
+      ]
+    },
+    "id": 356,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 342,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 355,
+        "linearizedBaseContracts": [
+          355
+        ],
+        "name": "set_int",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 344,
+            "name": "public_int",
+            "nodeType": "VariableDeclaration",
+            "scope": 355,
+            "src": "52:24:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 343,
+              "name": "int256",
+              "nodeType": "ElementaryTypeName",
+              "src": "52:6:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 353,
+              "nodeType": "Block",
+              "src": "122:38:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 349,
+                      "name": "public_int",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 344,
+                      "src": "133:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 350,
+                      "name": "tmpNum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 346,
+                      "src": "146:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "133:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 352,
+                  "nodeType": "ExpressionStatement",
+                  "src": "133:19:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 354,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "set_int",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 346,
+                  "name": "tmpNum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 354,
+                  "src": "100:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 345,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "99:15:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "122:0:7"
+            },
+            "scope": 355,
+            "src": "83:77:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 356,
+        "src": "28:137:7"
+      }
+    ],
+    "src": "0:165:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/kyrastephen/SmartSponsor/truffle_tutorial/truffleWorkspace/contracts/set_int.sol",
+    "exportedSymbols": {
+      "set_int": [
+        355
+      ]
+    },
+    "id": 356,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 342,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 355,
+        "linearizedBaseContracts": [
+          355
+        ],
+        "name": "set_int",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 344,
+            "name": "public_int",
+            "nodeType": "VariableDeclaration",
+            "scope": 355,
+            "src": "52:24:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 343,
+              "name": "int256",
+              "nodeType": "ElementaryTypeName",
+              "src": "52:6:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 353,
+              "nodeType": "Block",
+              "src": "122:38:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 349,
+                      "name": "public_int",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 344,
+                      "src": "133:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 350,
+                      "name": "tmpNum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 346,
+                      "src": "146:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "133:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 352,
+                  "nodeType": "ExpressionStatement",
+                  "src": "133:19:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 354,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "set_int",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 346,
+                  "name": "tmpNum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 354,
+                  "src": "100:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 345,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "99:15:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "122:0:7"
+            },
+            "scope": 355,
+            "src": "83:77:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 356,
+        "src": "28:137:7"
+      }
+    ],
+    "src": "0:165:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {
+    "1523123343354": {
+      "events": {},
+      "links": {},
+      "address": "0x9662227a7f0fae8c1c094f24782ed28b28e823ff",
+      "transactionHash": "0x83f46c6d261a3226ffdffecbdd782c7682966699a26bec60474f3624d75bc092"
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-07T17:53:16.042Z"
+}
