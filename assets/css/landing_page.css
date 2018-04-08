@@ -59,17 +59,31 @@ color: #2D1172;
   color:#2D1172;
 }
 
-.success_checkmark{
+#brandConfirmationForm{
+  padding-left:120px;
+  color:#2D1172;
+
+}
+
+.success-checkmark{
   background-image: url("../images/success.png");
   margin:auto;
   width: 117px;
   height: 117px;
 }
 
-.success_name{
+.success-name{
   font-size: 30px;
+  padding-left:250px;
 }
 
+.success-container{
+  padding-top:100px;
+}
+
+.logo-container{
+  padding-top:100px;
+}
 .form-control{
   background: transparent;
    border: none;
