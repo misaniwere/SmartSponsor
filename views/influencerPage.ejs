@@ -38,8 +38,10 @@
 
                    <div class="priceContainerPage">
                      <p class="price-title">Prize</p>
-                     <p class="price-dollarsign">$</p><p class="shipment-value"><%= data.BountyPrice %></p>
-                   <p class="shipment-crypto"><%= data.BountyCryptoPrice %></p><p class="price-eth">ETH</p>
+                  <div class="price_container">
+                      <p class="shipment-value">$ <%= data.BountyPrice %></p>
+                      <p class="shipment-crypto"><%= data.BountyCryptoPrice %>ETH</p>
+                  </div>
                  </div>
 
                  <div class="shipment-details">
@@ -49,10 +51,7 @@
                      <p class="shipment-youtube"> @<%= data.Youtube %></p>
                      <p class="shipment-location"> <%= data.BountyDescription %></p>
                      <p class="shipment-initiation">Date Posted: <%= data.Date %></p>
-                     <div class="price_container">
-                      <p class="shipment-value">$ <%= data.BountyPrice %></p>
-                      <p class="shipment-crypto"><%= data.BountyCryptoPrice %>ETH</p>
-                  </div>
+
 
 
                  </div>
@@ -65,6 +64,7 @@
             </div>
             <div class="card" id="<%= data._id %>">
              <li>
+               <p class="bounty_count_title"> Fulfill the bounty</p>
             <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
               <input id="influencername" type="text">
             </br>
@@ -75,14 +75,15 @@
               <input id="terms" type="text">
               </br>
 
-              <button id="button">Submit Contract</button>
+              <button class="submit_contract" id="button">Submit Contract</button>
             </li>
           </div>
 
           <div class="card content_urls" id="<%= data._id %>">
            <li>
+             <p class="bounty_title_more"> More by <%=data.Name %></p>
              <% for(var i=0; i < data.ContentUrls.length; i++) { %>
-             <iframe width="420" height="315"
+             <iframe width="100%" height="100%"
             src="<%= data.ContentUrls[i] %>">
             </iframe>
             <% } %>
@@ -167,7 +168,7 @@
 	}
 ]);
 
-  var Coursetro = SmartSponsor.at('0xca0fec4e84a25c07804558376dcfa3ce8424b816');
+  var Coursetro = SmartSponsor.at('0x027f1dca4788d6cebdce5d71138847af14e4f3ef');
       console.log(Coursetro);
       $("#buttonget").click(function() {
           Coursetro.get(function(err, result){

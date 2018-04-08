@@ -10,8 +10,9 @@ body{
   display:flex;
   flex-direction:column;
   float:left;
-  width: 207px;
-height: 166px;
+  width: 150px;
+  text-align:center;
+height: 150px;
 }
 
 .shipment-list-vertical{
@@ -132,7 +133,7 @@ color: #2F80ED;
    height: 32px;
 }
 
-.shipment-list-vertical .shipment-details .shipment-value{
+ .shipment-value{
    float: right;
 
    padding-top: 6px;
@@ -205,8 +206,8 @@ background: none;
 .bounty_count_title{
   width: 288px;
 height: 43px;
-left: 431px;
-top: 251px;
+margin:auto;
+
 
 font-family: SF UI Text;
 line-height: normal;
@@ -214,6 +215,18 @@ font-size: 36px;
 letter-spacing: -0.078px;
 
 color: #000000;
+}
+
+.bounty_title_more{
+
+
+font-family: SF UI Text;
+line-height: normal;
+font-size: 36px;
+letter-spacing: -0.078px;
+
+color: #000000;
+
 }
 .logo.small img{
   height: 50px;
@@ -262,3 +275,19 @@ color: #000000;
       padding: 14px 16px;
       text-decoration: none;
   }
+
+#terms{
+  width:100%;
+  height: 100px;
+}
+
+.submit_contract{
+  background: #F2395B;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  height: 42px;
+  color: #ffff;
+  width: 119px;
+  font-size: 16px;
+  margin:auto;
+}

@@ -14,3 +14,8 @@
     height: 100%;
     opacity:.7;
 }
+
+.col-lg-2 control-label{
+  height:200px;
+    font-size:14pt;
+}
