@@ -18,13 +18,6 @@ app.get('/dashboard', function(req, res) {
    });
 });
 
-
-app.post('/dashboard', function(req, res){
-	var contract = "I agree to these terms";
-	var hash = bcrypt.hashSync(contract, bcrypt.genSaltSync(10));
-
-});
-
 // app.get('/sample', function(req, res){
 // 	res.render('sample');
 // })
