@@ -2,17 +2,17 @@ pragma solidity ^0.4.21;
 
 contract SmartSponsor {
     string influencerName;
-    address influencerAccount;
+    //address influencerAccount;
     string brandName;
     string terms;
     uint256 funds;
     address bidder;
     string bidStatus;
-    bool contractComplete;
+    //bool contractComplete;
 
-    function set(string _influencerName, address _influencerAccount, string _brandName, string _terms) public {
+    function set(string _influencerName, string _brandName, string _terms) public {
         influencerName = _influencerName;
-        influencerAccount = _influencerAccount;
+        //influencerAccount = _influencerAccount;
         brandName = _brandName;
         terms = _terms;
     }
@@ -21,12 +21,12 @@ contract SmartSponsor {
         return (influencerName,brandName,terms);
     }
 
-    /*function submitBid(uint256 _funds) external payable {
-        funds = _funds;
-		    bidder = msg.sender;
-		    bidStatus = "Bid Submitted";
+    function submitBid() external payable {
+        funds = msg.value;
+	       bidder = msg.sender;
+	       bidStatus = "Bid Submitted";
 	}
-
+  /*
 	function getStatus() external constant returns (address,address,uint256) {
 	    return (bidder,influencerAccount,funds);
 	}

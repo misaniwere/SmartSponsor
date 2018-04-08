@@ -8,6 +8,7 @@
     <title>Document</title>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/influencerPage.css">
+    <script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
 
 </head>
 <body>
@@ -21,7 +22,7 @@
           <input id="terms" type="text">
 
           <button id="button">Submit Contract</button>
-          <!--<button id="buttonget">Get Instructor</button>-->
+          <button id="buttonget">Get Instructor</button>
     </div>
   </div>
 </body>
@@ -40,64 +41,10 @@
         var SmartSponsor = web3.eth.contract([
 	{
 		"constant": false,
-		"inputs": [],
-		"name": "acceptBid",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "completeWork",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "payout",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
 		"inputs": [
 			{
 				"name": "_influencerName",
 				"type": "string"
-			},
-			{
-				"name": "_influencerAccount",
-				"type": "address"
 			},
 			{
 				"name": "_brandName",
@@ -116,12 +63,7 @@
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "_funds",
-				"type": "uint256"
-			}
-		],
+		"inputs": [],
 		"name": "submitBid",
 		"outputs": [],
 		"payable": true,
@@ -149,55 +91,34 @@
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getStatus",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			},
-			{
-				"name": "",
-				"type": "address"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
 	}
 ]);
 
-  var Coursetro = SmartSponsor.at('0xf17bc99a8d394eeb95ec772697081654a57cba7e');
+  var Coursetro = SmartSponsor.at('0xa947d0389d8e430ecad2e8c841f879a8d19eb27d');
       console.log(Coursetro);
-
-      $("#button").click(function() {
-          Coursetro.set($("#influencername").val(), "0x96a38185f29761cCfb18a460B2eC1895a86460a3", $("#brandname").val(), $("#terms").val(), function(err, result){
-            if(err){
-              console.log(err);
-            }
-            else{
-              console.log(result);
-              window.location.replace('/');
-              }
-            });
-          });
       $("#buttonget").click(function() {
           Coursetro.get(function(err, result){
             if(err){
               console.log(err);
             }
             else{
-              console.log("blah " + result);
+              console.log(result);
             }
           });
       });
+      $("#button").click(function() {
+          Coursetro.set($("#influencername").val(),$("#brandname").val(), $("#terms").val(), function(err, result){
+            if(err){
+              console.log(err);
+              console.log("set error");
+            }
+            else{
+              console.log("set success");
+              console.log(result);
+              window.location.replace('/');
+              }
+            });
+          });
 
     </script>
 </html>
