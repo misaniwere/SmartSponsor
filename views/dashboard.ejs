@@ -22,23 +22,28 @@
     <img src="../assets/images/profile_icon.png" alt="Profile" ></a></li>
   </ul>
          <ul class="shipment-list-vertical">
+           <p class="bounty_count_title"><%= data.length %> Live Bounties</p>
 
              <% if (typeof data !== 'undefined' && data.length > 0) { %>
 
               <% for(var i=0; i < data.length; i++) { %>
+
                 <button class="card" id="<%= data[i]._id %>">
                  <li>
                  <a href="#" class="shipment-customer">
                           <img src="<%= data[i].imageUrl %>" height="160" alt="iPhone 6" />
                       </a>
                  <div class="shipment-details">
-                          <a target="_blank" href="<%= data[i].purchase_url %>" class="shipment-view">View Shipment Item</a>
+                   <a class="heart_outline" href="/dashboard">
+                   <img src="../assets/images/heartoutline.png" alt="Profile" ></a>
                      <h2><%= data[i].Name %></h2>
-                     <p class="shipment-location"> <%= data[i].Youtube %></p>
+                     <p class="shipment-youtube"> @<%= data[i].Youtube %></p>
                      <p class="shipment-location"> <%= data[i].BountyDescription %></p>
                      <p class="shipment-initiation">Date Posted: <%= data[i].Date %></p>
-
-                    <p class="shipment-value">$ <%= data[i].BountyPrice %></p>
+                     <div class="price_container">
+                      <p class="shipment-value">$ <%= data[i].BountyPrice %></p>
+                      <p class="shipment-crypto"><%= data[i].BountyCryptoPrice %>ETH</p>
+                  </div>
 
 
                  </div>

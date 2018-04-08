@@ -89,6 +89,15 @@ img{
    margin: 20px 0;
 }
 
+.shipment-youtube{
+  font-family: SF UI Text;
+line-height: normal;
+font-size: 18px;
+letter-spacing: -0.078px;
+
+color: #2F80ED;
+}
+
 .shipment-list-vertical .shipment-details .shipment-initiation{
    color: #5d5d5d;
    font-size: 18px;
@@ -117,12 +126,38 @@ img{
 .shipment-list-vertical .shipment-details .shipment-value{
    float: right;
 
-   color:  #4e4e4e;
-   font-weight: bold;
-   font-size: 25px;
-
    padding-top: 6px;
    margin: 0;
+   font-family: SF UI Text;
+line-height: normal;
+font-size: 32px;
+letter-spacing: -0.078px;
+
+color: #F2395B;
+}
+
+.shipment-crypto{
+  font-family: SF UI Text;
+line-height: normal;
+font-size: 18px;
+letter-spacing: -0.078px;
+
+color: #000000;
+float: right;
+margin: 0px;
+}
+
+
+.heart_outline img{
+  width: 36px;
+height: 32px;
+float:right;
+}
+
+.price_container{
+  display:flex;
+  flex-direction:column;
+  float:right;
 }
 
 .card{
@@ -131,7 +166,7 @@ border: none;
 background: none;
 }
 
-/* Making the product list responsive */
+/* Making the product list responsive
 
 @media (max-width: 600px){
 
@@ -157,7 +192,19 @@ background: none;
    .shipment-list-vertical .shipment-details .shipment-initiation{
        margin-top: 10px;
    }
+}*/
+.bounty_count_title{
+  width: 288px;
+height: 43px;
+left: 431px;
+top: 251px;
 
+font-family: SF UI Text;
+line-height: normal;
+font-size: 36px;
+letter-spacing: -0.078px;
+
+color: #000000;
 }
 .logo.small img{
   height: 50px;
@@ -174,7 +221,7 @@ background: none;
     height: 50px;
       width: 50px;
       position: absolute;
-      right: 60px;
+      right: 70px;
     }
 
 
@@ -184,8 +231,8 @@ background: none;
 
   .logo.magnifier img{
     position: absolute;
-    left: 830px;
-    width: 10px;
+    left: 810px;
+    width: 20px;
     height: 35px;
     top: 30px;
   }
