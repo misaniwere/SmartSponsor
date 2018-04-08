@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SmartSponsor</title>
+    <title>Document</title>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/influencerPage.css">
     <script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
@@ -33,15 +33,13 @@
 
              <% if (typeof data !== 'undefined') { %>
 
-                <button class="card" id="<%= data._id %>">
+                <div class="card" id="<%= data._id %>">
                  <li>
 
                    <div class="priceContainerPage">
                      <p class="price-title">Prize</p>
-                     <p class="price-dollarsign">$</p>
-                   <p class="shipment-value"><%= data.BountyPrice %></p>
-                   <p class="shipment-crypto"><%= data.BountyCryptoPrice %></p>
-                   <p class="price-eth">ETH</p>
+                     <p class="price-dollarsign">$</p><p class="shipment-value"><%= data.BountyPrice %></p>
+                   <p class="shipment-crypto"><%= data.BountyCryptoPrice %></p><p class="price-eth">ETH</p>
                  </div>
 
                  <div class="shipment-details">
@@ -63,21 +61,41 @@
                  </li>
 
 
-              <% } %>
-            </button>
+
+            </div>
+            <div class="card" id="<%= data._id %>">
+             <li>
+            <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
+              <input id="influencername" type="text">
+            </br>
+              <label for="brandname" class="col-lg-2 control-label">Brand Name</label>
+              <input id="brandname" type="text">
+              </br>
+              <label for="terms" class="col-lg-2 control-label">Terms</label>
+              <input id="terms" type="text">
+              </br>
+
+              <button id="button">Submit Contract</button>
+            </li>
+          </div>
+
+          <div class="card content_urls" id="<%= data._id %>">
+           <li>
+             <% for(var i=0; i < data.ContentUrls.length; i++) { %>
+             <iframe width="420" height="315"
+            src="<%= data.ContentUrls[i] %>">
+            </iframe>
+            <% } %>
+
+           </li>
+         </div>
+         <% } %>
+
+
              </ul>
          </div>
        </div>
-        <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
-          <input id="influencername" type="text">
 
-          <label for="brandname" class="col-lg-2 control-label">Brand Name</label>
-          <input id="brandname" type="text">
-          <label for="terms" class="col-lg-2 control-label">Terms</label>
-          <input id="terms" type="text">
-
-          <button id="button">Submit Contract</button>
-          <!--<button id="buttonget">Get Instructor</button>-->
     </div>
   </div>
 </body>
@@ -162,7 +180,7 @@
           });
       });
       $("#button").click(function() {
-          /*Coursetro.set($("#influencername").val(),$("#brandname").val(), $("#terms").val(), function(err, result){
+          Coursetro.set($("#influencername").val(),$("#brandname").val(), $("#terms").val(), function(err, result){
             if(err){
               console.log(err);
               console.log("set error");
@@ -170,10 +188,9 @@
             else{
               console.log("set success");
               console.log(result);
-              window.location.replace('/');
+              window.location.replace('/confirmation');
               }
-            });*/
-            window.location.replace('/confirmation');
+            });
           });
 
     </script>
