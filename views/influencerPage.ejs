@@ -9,6 +9,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/influencerPage.css">
     <script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="/assets/scripts/influencerPage.js"></script>
 
 </head>
 <body>
@@ -81,12 +82,28 @@
           <div class="card content_urls" id="<%= data._id %>">
            <li>
              <p class="bounty_title_more"> More by <%=data.Name %></p>
-             <% for(var i=0; i < data.ContentUrls.length; i++) { %>
-             <iframe width="100%" height="100%"
-            src="<%= data.ContentUrls[i] %>">
-            </iframe>
-            <% } %>
-
+             <div class="more-content-wrapper">
+               <div class="content-media-wrapper">
+                 <% for(var i=0; i < data.ContentUrls.length; i++) { %>
+                <div class="videoWrapper">
+                   <iframe width="560" height="349"
+                  src="<%= data.ContentUrls[i] %>">
+                  </iframe>
+                </div>
+                <% } %>
+              </div>
+              <p class="moreBy"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nunc id tristique magna. Mauris pulvinar porta blandit. Proin in odio elit.
+              Phasellus non est at libero fermentum volutpat vulputate vitae tortor.
+              Praesent sed lacus id sem maximus condimentum. Pellentesque habitant morbi
+              tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque
+              ultricies erat sed convallis porttitor. Donec vestibulum elit sit amet elit
+              placerat pharetra. Etiam libero quam, pellentesque quis vestibulum et, varius
+              quis nunc. Donec ex felis, laoreet vitae libero et, mattis fermentum dolor.
+              Morbi ut tincidunt nulla. In magna felis, volutpat sed fermentum quis, blandit
+              sed nunc.
+            </p>
+            </div>
            </li>
          </div>
          <% } %>
