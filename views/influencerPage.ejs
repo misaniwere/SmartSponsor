@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SmartSponsor</title>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/influencerPage.css">
     <script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
@@ -77,7 +77,7 @@
           <input id="terms" type="text">
 
           <button id="button">Submit Contract</button>
-          <button id="buttonget">Get Instructor</button>
+          <!--<button id="buttonget">Get Instructor</button>-->
     </div>
   </div>
 </body>
@@ -162,7 +162,7 @@
           });
       });
       $("#button").click(function() {
-          Coursetro.set($("#influencername").val(),$("#brandname").val(), $("#terms").val(), function(err, result){
+          /*Coursetro.set($("#influencername").val(),$("#brandname").val(), $("#terms").val(), function(err, result){
             if(err){
               console.log(err);
               console.log("set error");
@@ -172,7 +172,8 @@
               console.log(result);
               window.location.replace('/');
               }
-            });
+            });*/
+            window.location.replace('/confirmation');
           });
 
     </script>

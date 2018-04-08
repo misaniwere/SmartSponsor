@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <!-- <script src="/src/ImportSmartContract.js"></script> -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../assets/css/landing_page.css">
+  <script src="/assets/scripts/confirmation.js"></script>
+
+<body>
+  <div class="background">
+    <div class="layer"></div>
+    <div class="overlay">
+      <div class="success-container">
+        <div class="success-checkmark"></div>
+        <p class="success-name">Thank You!</p>
+    </div>
+      <form id="brandConfirmationForm"  method="get" action="/dashboard">
+        <% if (typeof data !== 'undefined') { %>
+          <div class="text-center form-group">
+            <p class="success_text">Your bid has been sent to this Influencer!</p>
+            <p> Please wait 3 business days for a response!</p>
+            <input class="okbutton" type="submit" value="OK"/>
+          </div>
+        <% } %>
+      </form>
+   </div>
+</div>
+
+</body>
+</html>
