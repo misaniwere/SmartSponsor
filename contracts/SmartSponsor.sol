@@ -21,7 +21,7 @@ contract SmartSponsor {
         return (influencerName,brandName,terms);
     }
 
-    function submitBid(uint256 _funds) external payable {
+    /*function submitBid(uint256 _funds) external payable {
         funds = _funds;
 		    bidder = msg.sender;
 		    bidStatus = "Bid Submitted";
@@ -59,6 +59,6 @@ contract SmartSponsor {
 	        bidStatus = "Payout Complete!";
 	        return bidStatus;
 	    }
-	}
+	}*/
 
 }

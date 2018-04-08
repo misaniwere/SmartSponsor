@@ -12,20 +12,16 @@
 </head>
 <body>
     <div class="background">
-      <form>
         <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
           <input id="influencername" type="text">
 
           <label for="brandname" class="col-lg-2 control-label">Brand Name</label>
           <input id="brandname" type="text">
-
           <label for="terms" class="col-lg-2 control-label">Terms</label>
           <input id="terms" type="text">
 
           <button id="button">Submit Contract</button>
           <!--<button id="buttonget">Get Instructor</button>-->
-      </form>
-
     </div>
   </div>
 </body>
@@ -44,10 +40,64 @@
         var SmartSponsor = web3.eth.contract([
 	{
 		"constant": false,
+		"inputs": [],
+		"name": "acceptBid",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "completeWork",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "payout",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
 		"inputs": [
 			{
 				"name": "_influencerName",
 				"type": "string"
+			},
+			{
+				"name": "_influencerAccount",
+				"type": "address"
 			},
 			{
 				"name": "_brandName",
@@ -62,6 +112,20 @@
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_funds",
+				"type": "uint256"
+			}
+		],
+		"name": "submitBid",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -85,6 +149,28 @@
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getStatus",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]);
 
@@ -92,15 +178,16 @@
       console.log(Coursetro);
 
       $("#button").click(function() {
-          Coursetro.set($("#influencername").val(), $("#brandname").val(), $("#terms").val(), function(err, result){
+          Coursetro.set($("#influencername").val(), "0x96a38185f29761cCfb18a460B2eC1895a86460a3", $("#brandname").val(), $("#terms").val(), function(err, result){
             if(err){
               console.log(err);
             }
             else{
               console.log(result);
-            }
+              window.location.replace('/');
+              }
+            });
           });
-      });
       $("#buttonget").click(function() {
           Coursetro.get(function(err, result){
             if(err){
