@@ -2,7 +2,7 @@
 
 function handleClickOnInfluencer(){
     $('.card').click(function(){
-      var id = $('.card').attr('id');
+      var id = this.id;
         window.location.replace('/influencerPage?name='+id);
     });
 }
