@@ -5,6 +5,15 @@ body{
 
 }
 
+.priceContainerPage{
+  background: #F2F2F2;
+  display:flex;
+  flex-direction:column;
+  float:left;
+  width: 207px;
+height: 166px;
+}
+
 .shipment-list-vertical{
    list-style:none;
    margin: 0 auto;

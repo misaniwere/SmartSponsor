@@ -12,7 +12,59 @@
 
 </head>
 <body>
-    <div class="background">
+  <link rel="stylesheet" type="text/css" href="../assets/css/dashboard.css">
+
+<body>
+  <div class="background">
+    <div>
+      <ul class="nav">
+    <li><a class="logo small" href="/dashboard">
+    <img src="../assets/images/logo_small.png" alt="Go to dashboard!" ></a></li>
+    <li><a class="logo search" href="/dashboard">
+    <img src="../assets/images/search.png" alt="Search" ></a></li>
+    <li><a class="logo magnifier" href="/dashboard">
+    <img src="../assets/images/Group.png" alt="Search" ></a></li>
+    <li><a class="logo heart" href="/dashboard">
+    <img src="../assets/images/heart.png" alt="Heart" ></a></li>
+    <li><a class="logo profile" href="/dashboard">
+    <img src="../assets/images/profile_icon.png" alt="Profile" ></a></li>
+  </ul>
+         <ul class="shipment-list-vertical">
+
+             <% if (typeof data !== 'undefined') { %>
+
+                <button class="card" id="<%= data._id %>">
+                 <li>
+
+                   <div class="priceContainerPage">
+                   <p class="shipment-value">$ <%= data.BountyPrice %></p>
+                   <p class="shipment-crypto"><%= data.BountyCryptoPrice %>ETH</p>
+                 </div>
+
+                 <div class="shipment-details">
+                   <a class="heart_outline" href="/dashboard">
+                   <img src="../assets/images/heartoutline.png" alt="Profile" ></a>
+                     <h2><%= data.Name %></h2>
+                     <p class="shipment-youtube"> @<%= data.Youtube %></p>
+                     <p class="shipment-location"> <%= data.BountyDescription %></p>
+                     <p class="shipment-initiation">Date Posted: <%= data.Date %></p>
+                     <div class="price_container">
+                      <p class="shipment-value">$ <%= data.BountyPrice %></p>
+                      <p class="shipment-crypto"><%= data.BountyCryptoPrice %>ETH</p>
+                  </div>
+
+
+                 </div>
+                 <!-- <button className="confirm_contract">Confirm Contract</button> -->
+
+                 </li>
+
+
+              <% } %>
+            </button>
+             </ul>
+         </div>
+       </div>
         <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
           <input id="influencername" type="text">
 
@@ -94,7 +146,7 @@
 	}
 ]);
 
-  var Coursetro = SmartSponsor.at('0xa947d0389d8e430ecad2e8c841f879a8d19eb27d');
+  var Coursetro = SmartSponsor.at('0xca0fec4e84a25c07804558376dcfa3ce8424b816');
       console.log(Coursetro);
       $("#buttonget").click(function() {
           Coursetro.get(function(err, result){
