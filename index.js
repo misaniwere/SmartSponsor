@@ -5,9 +5,6 @@ var bodyParser = require('body-parser');
 
 'use strict';
 
-
-
-
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
 

@@ -1,0 +1,148 @@
+.shipment-list-vertical{
+   list-style:none;
+   margin: 0 auto;
+   max-width: 600px;
+   padding: 0;
+}
+
+.shipment-list-vertical li{
+   box-sizing:border-box;
+   overflow: hidden;
+
+   text-align:left;
+   font:normal 12px sans-serif;
+
+   background-color:#ffffff;
+   border:1px solid #dbe3e7;
+   border-radius: 3px;
+   box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
+
+   max-width:570px;
+   margin-bottom: 25px;
+   padding: 25px;
+}
+
+/* Product image */
+
+.shipment-list-vertical .shipment-customer{
+   float:left;
+   display: block;
+
+   text-align: center;
+   box-shadow : 0 0 20px 8px #f3f3f3 inset;
+
+   width: 200px;
+   height: 200px;
+   margin-right: 25px;
+   padding: 20px 0;
+   box-sizing: border-box;
+
+}
+
+img{
+  width: 200px;
+}
+
+.shipment-list-vertical .shipment-details{
+   max-width: 275px;
+   float: right;
+}
+
+/* Product title */
+
+.shipment-list-vertical .shipment-details h2{
+   display: block;
+   margin:0;
+   font-size: 18px;
+   white-space: normal;
+   overflow: hidden;
+   text-overflow:ellipsis;
+}
+
+.shipment-list-vertical .shipment-details h2 a{
+   color: #2b2b2b;
+   text-decoration: none;
+}
+
+.shipment-list-vertical .shipment-details .shipment-view{
+   float:right;
+   color: #808080;
+   text-decoration: none;
+   margin-top: 5px;
+}
+
+/* Product description */
+
+.shipment-list-vertical .shipment-details .shipment-location{
+   color: #5d5d5d;
+   font-size: 18px;
+   line-height: 20px;
+   white-space: normal;
+
+   margin: 20px 0;
+}
+
+.shipment-list-vertical .shipment-details .shipment-initiation{
+   color: #5d5d5d;
+   font-size: 18px;
+   line-height: 20px;
+   white-space: normal;
+
+   margin: 20px 0;
+}
+
+/* Product button and price */
+
+.shipment-list-vertical .shipment-details button{
+   border-radius: 2px;
+   background-color:  #87bae1;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+   border: 0;
+   color: #ffffff;
+   font-weight: bold;
+   font-size: 13px;
+   cursor: pointer;
+
+   width: 95px;
+   height: 32px;
+}
+
+.shipment-list-vertical .shipment-details .shipment-value{
+   float: right;
+
+   color:  #4e4e4e;
+   font-weight: bold;
+   font-size: 25px;
+
+   padding-top: 6px;
+   margin: 0;
+}
+
+/* Making the product list responsive */
+
+@media (max-width: 600px){
+
+   .shipment-list-vertical li{
+       max-width:265px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .shipment-list-vertical .shipment-customer{
+       float:none;
+       margin: 0 0 25px 0;
+   }
+
+   .shipment-list-vertical .shipment-details{
+       float: none;
+   }
+
+   .shipment-list-vertical .shipment-details .shipment-location{
+       margin-top: 10px;
+   }
+
+   .shipment-list-vertical .shipment-details .shipment-initiation{
+       margin-top: 10px;
+   }
+
+}
