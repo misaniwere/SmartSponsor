@@ -32,7 +32,8 @@
          <ul class="shipment-list-vertical">
 
              <% if (typeof data !== 'undefined') { %>
-
+               <!-- <div class="first_card">
+                <img class="influencer_image" src="<%= data.imageUrl %>" alt="Profile" ></a> -->
                 <div class="card" id="<%= data._id %>">
                  <li>
 
@@ -51,17 +52,15 @@
                      <p class="shipment-youtube"> @<%= data.Youtube %></p>
                      <p class="shipment-location"> <%= data.BountyDescription %></p>
                      <p class="shipment-initiation">Date Posted: <%= data.Date %></p>
-
-
-
                  </div>
-                 <!-- <button className="confirm_contract">Confirm Contract</button> -->
-
+                 <div class="tags">
+                 <% for(var j=0; j < data.Tags.length; j++) { %>
+                   <div class="tag"><%= data.Tags[j] %></div>
+                 <% } %>
+                 </div>
                  </li>
-
-
-
-            </div>
+            <!-- </div> -->
+          </div>
             <div class="card" id="<%= data._id %>">
              <li>
                <p class="bounty_count_title"> Fulfill the bounty</p>

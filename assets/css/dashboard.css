@@ -291,3 +291,30 @@ color: #000000;
   font-size: 16px;
   margin:auto;
 }
+
+.tags{
+  display:flex;
+  float:left;
+}
+
+.tag{
+  background: #F2395B;
+  color: #ffff;
+  background: #F2395B;
+    color: #ffff;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    text-align:center;
+
+}
+/*
+.first_card{
+  display:flex;
+  min-height: 100px;
+}
+
+.influencer_image{
+  width:100px;
+  height:100px;
+} */

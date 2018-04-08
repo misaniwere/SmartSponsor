@@ -43,9 +43,12 @@
                      <div class="price_container">
                       <p class="shipment-value">$ <%= data[i].BountyPrice %></p>
                       <p class="shipment-crypto"><%= data[i].BountyCryptoPrice %>ETH</p>
-                  </div>
-
-
+                     </div>
+                 </div>
+                 <div class="tags">
+                 <% for(var j=0; j < data[i].Tags.length; j++) { %>
+                   <div class="tag"><%= data[i].Tags[j] %></div>
+                 <% } %>
                  </div>
                  <!-- <button className="confirm_contract">Confirm Contract</button> -->
 
