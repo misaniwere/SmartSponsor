@@ -25,8 +25,8 @@ app.post('/dashboard', function(req, res){
 
 });
 
-app.get('/sample', function(req, res){
-	res.render('sample');
-})
+// app.get('/sample', function(req, res){
+// 	res.render('sample');
+// })
 
 module.exports = app;

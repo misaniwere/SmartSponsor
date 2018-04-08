@@ -5,8 +5,15 @@
 
 }
 
+.logo{
+  background-image: url("../images/logo_v2.png");
+  width: 156px;
+  height: 120px;
+  margin:auto;
+}
+
 .layer {
-    background-color: #2D1172;
+    background-color: rgba(242, 57, 91, 0.9);;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,10 +54,20 @@ color: #2D1172;
 }
 
 #brandForm{
-  padding-top:330px;
+  padding-top:100px;
   padding-left:120px;
   color:#2D1172;
+}
 
+.success_checkmark{
+  background-image: url("../images/success.png");
+  margin:auto;
+  width: 117px;
+  height: 117px;
+}
+
+.success_name{
+  font-size: 30px;
 }
 
 .form-control{
@@ -58,7 +75,8 @@ color: #2D1172;
    border: none;
    border-bottom: 1px solid #2D1172;
    width: 363px;
-   padding-top:52px;
+   font-size: 20px;
+    padding-top: 40px;
 }
 
 .success_text{

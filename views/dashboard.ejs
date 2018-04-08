@@ -3,14 +3,17 @@
 <head>
   <!-- <script src="/src/ImportSmartContract.js"></script> -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="/assets/scripts/dashboard.js"></script>
   <link rel="stylesheet" type="text/css" href="../assets/css/dashboard.css">
 
 <body>
   <div>
        <ul class="shipment-list-vertical">
+
            <% if (typeof data !== 'undefined' && data.length > 0) { %>
 
             <% for(var i=0; i < data.length; i++) { %>
+              <button class="card" id="<%= data[i]._id %>">
                <li>
                <a href="#" class="shipment-customer">
                         <img src="<%= data[i].imageUrl %>" height="160" alt="iPhone 6" />
@@ -22,14 +25,18 @@
                    <p class="shipment-location"> <%= data[i].BountyDescription %></p>
                    <p class="shipment-initiation">Date Posted: <%= data[i].Date %></p>
 
-                        <p class="shipment-value">$ <%= data[i].BountyPrice %></p>
-                  <button className="confirm_contract">Confirm Contract</button>
+                  <p class="shipment-value">$ <%= data[i].BountyPrice %></p>
+
+
                </div>
+               <!-- <button className="confirm_contract">Confirm Contract</button> -->
+
                </li>
 
 
             <% } %>
             <% } %>
+          </button>
            </ul>
        </div>
 

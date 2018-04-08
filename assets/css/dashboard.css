@@ -118,6 +118,12 @@ img{
    margin: 0;
 }
 
+.card{
+  padding: 0;
+border: none;
+background: none;
+}
+
 /* Making the product list responsive */
 
 @media (max-width: 600px){

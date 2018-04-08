@@ -16,8 +16,10 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 var landing_page = require('./controllers/landingController');
 var dashboard = require('./controllers/dashboardController');
+var influencerPage = require('./controllers/influencerPageController');
 app.use('/', landing_page);
 app.use('/', dashboard);
+app.use('/',influencerPage);
 
 //const ip = require("ip");// ip.address()
 app.use('/src', express.static('src'));
