@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-
-    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/influencerPage.css">
 
 </head>
 <body>
-    <div class="container">
-
-        <h1>Coursetro Instructor</h1>
-
+    <div class="background">
+      <form>
         <label for="influencername" class="col-lg-2 control-label">Influencer Name</label>
-        <input id="influencername" type="text">
+          <input id="influencername" type="text">
 
-        <label for="brandname" class="col-lg-2 control-label">Brand Name</label>
-        <input id="brandname" type="text">
+          <label for="brandname" class="col-lg-2 control-label">Brand Name</label>
+          <input id="brandname" type="text">
 
-        <label for="terms" class="col-lg-2 control-label">Terms</label>
-        <input id="terms" type="text">
+          <label for="terms" class="col-lg-2 control-label">Terms</label>
+          <input id="terms" type="text">
 
-        <button id="button">Update Instructor</button>
-        <button id="buttonget">Get Instructor</button>
-
+          <button id="button">Submit Contract</button>
+          <!--<button id="buttonget">Get Instructor</button>-->
+      </form>
 
     </div>
-
+  </div>
+</body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
     <script>
@@ -93,40 +91,26 @@
   var Coursetro = SmartSponsor.at('0xf17bc99a8d394eeb95ec772697081654a57cba7e');
       console.log(Coursetro);
 
-      Coursetro.get(function(error, result){
-                if(!error)
-                    {
-                        console.log(result);
-                    }
-                else
-                    console.error(error);
-            });
-
-            $("#button").click(function() {
-                Coursetro.set($("#influencername").val(), $("#brandname").val(), $("#terms").val(), function(err, result){
-                  if(err){
-                    console.log(err);
-                  }
-                  else{
-                    console.log(result);
-                  }
-                });
-            });
-            $("#buttonget").click(function() {
-                Coursetro.get(function(err, result){
-                  if(err){
-                    console.log(err);
-                  }
-                  else{
-                    console.log("blah " + result);
-                  }
-                });
-            });
-
-
+      $("#button").click(function() {
+          Coursetro.set($("#influencername").val(), $("#brandname").val(), $("#terms").val(), function(err, result){
+            if(err){
+              console.log(err);
+            }
+            else{
+              console.log(result);
+            }
+          });
+      });
+      $("#buttonget").click(function() {
+          Coursetro.get(function(err, result){
+            if(err){
+              console.log(err);
+            }
+            else{
+              console.log("blah " + result);
+            }
+          });
+      });
 
     </script>
-
-
-</body>
 </html>
