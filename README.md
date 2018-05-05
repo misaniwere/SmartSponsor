@@ -1,2 +1,2 @@
 # SmartSponsor
-Monetize your content in a smart and secure way!
+A decentralized web application that streamlines the sponsorship process for content creators. 
